@@ -83,3 +83,17 @@ footer {
       transform: scale(1.1);
     }
   } */
+
+  @media(max-width: 329px) {
+    .key {
+        padding: 10px;
+        width: 80px;
+    }   
+  }
+
+  @media(max-width: 269px) {
+    .key {
+        padding: 5px;
+        width: 60px;
+    }   
+  }
