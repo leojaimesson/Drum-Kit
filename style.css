@@ -12,7 +12,7 @@ body, p, footer {
     height: 92vh;
     width: 100%;
     background: url("music.jpg") no-repeat center bottom fixed;
-    background-size: cover;
+    background-size: cover; 
     flex-direction: column;
     display: flex;
     align-items: center;
