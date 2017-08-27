@@ -34,13 +34,25 @@
 
     // lendo eventos do teclado
     addEvent('html', 'keydown', function (event) {
-        play(event.keyCode);
+
+        const audio = qs(`div[data-key="${event.keyCode}"]`);
+        console.log(audio);
+        if (audio) {
+            audio.classList.add('playing');
+            play(event.keyCode);
+            setTimeout(() => {
+                audio.classList.remove('playing');
+            }, 70);
+        }
     });
 
     // lendo eventos do click
     addEvent('.key', 'click', function (event) {
+        this.classList.add('playing');
         play(this.dataset.key);
+        setTimeout(() => {
+            this.classList.remove('playing');
+        }, 70);
     });
 
 })(this || window);
-
